@@ -1,24 +1,23 @@
 <template>
-    <div>
+    <div class="todo-app">
       <h2>ChA JoSh?</h2>
       <form @submit.prevent="addTask">
         <input v-model="newTask" placeholder="Enter a new task" />
-        <button type="submit">Add</button>
+        <button type="submit"><i class="fas fa-plus"></i> Dodaj</button>
       </form>
-      <button @click="sortTasks">Sortiraj obaveze</button>
-      <div>Ukupno obaveza: {{ tasks.length }}</div>
+      <button @click="sortTasks"><i class="fas fa-sort"></i> Sortiraj</button>
+      <div>Ukupno Obaveza: {{ tasks.length }}</div>
       <div>Završeno: {{ completedTasks }}</div>
       <ul>
         <li v-for="task in filteredTasks" :key="task.id" :class="{ 'completed-task': task.completed }">
           <input type="checkbox" v-model="task.completed" />
           {{ task.text }}
-          <button @click="updateTask(task)">Izmjeni</button>
-          <button @click="deleteTask(task.id)">Obriši</button>
+          <button @click="updateTask(task)"><i class="fas fa-edit"></i> Uredi</button>
+          <button @click="deleteTask(task.id)"><i class="fas fa-trash"></i> Obriši</button>
         </li>
       </ul>
     </div>
   </template>
-  
   <script>
   import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, updateDoc } from 'firebase/firestore';
   import { auth } from '@/firebase';
@@ -97,9 +96,39 @@
   </script>
   
   <style scoped>
-  .completed-task {
-    text-decoration: line-through;
-    color: gray;
-  }
-  </style>
-  
+.todo-app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.fa {
+  margin-right: 5px;
+}
+</style>
