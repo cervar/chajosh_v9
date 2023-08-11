@@ -1,19 +1,19 @@
 <template>
     <div>
-      <h2>To-Do List</h2>
+      <h2>ChA JoSh?</h2>
       <form @submit.prevent="addTask">
         <input v-model="newTask" placeholder="Enter a new task" />
         <button type="submit">Add</button>
       </form>
-      <button @click="sortTasks">Sort Tasks</button>
-      <div>Total tasks: {{ tasks.length }}</div>
-      <div>Completed tasks: {{ completedTasks }}</div>
+      <button @click="sortTasks">Sortiraj obaveze</button>
+      <div>Ukupno obaveza: {{ tasks.length }}</div>
+      <div>Završeno: {{ completedTasks }}</div>
       <ul>
         <li v-for="task in filteredTasks" :key="task.id" :class="{ 'completed-task': task.completed }">
           <input type="checkbox" v-model="task.completed" />
           {{ task.text }}
-          <button @click="updateTask(task)">Update</button>
-          <button @click="deleteTask(task.id)">Delete</button>
+          <button @click="updateTask(task)">Izmjeni</button>
+          <button @click="deleteTask(task.id)">Obriši</button>
         </li>
       </ul>
     </div>
