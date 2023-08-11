@@ -14,11 +14,9 @@
 </template>
 
 <script>
-import { firebase } from 'firebase/app';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+// import { auth } from '@/firebase'; // NE TREBA više import auth iz firebase.js
 
-
-
-/* eslint-disable */
 export default {
   data() {
     return {
@@ -27,15 +25,16 @@ export default {
     };
   },
   methods: {
-    login() {
-      firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          alert('Login successful');
-          // Dodajte dodatnu logiku ili prijelaz na drugu rutu nakon prijave
-        })
-        .catch((error) => {
-          alert('Login failed: ' + error.message);
-        });
+    async login() {
+      const authInstance = getAuth(); // Dohvatite instancu autentikacije
+
+      try {
+        await signInWithEmailAndPassword(authInstance, this.email, this.password);
+        alert('Login successful');
+        // Dodajte dodatnu logiku ili prijelaz na drugu rutu nakon prijave
+      } catch (error) {
+        alert('Login failed: ' + error.message);
+      }
     }
   }
 };

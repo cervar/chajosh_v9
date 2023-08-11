@@ -1,8 +1,5 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCyaLHNR9FSAkZC-_KSeBnK-y_PhieI2w4",
@@ -13,8 +10,7 @@ const firebaseConfig = {
   appId: "1:1078814371116:web:6854071c8e004fb28c1089"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-// eslint-disable-next-line no-unused-vars
-const unusedVariable = app;
+export { app, auth };
