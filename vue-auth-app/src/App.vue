@@ -4,16 +4,22 @@
     <router-link to="/login">Login</router-link> |
     <router-link to="/todo">To-Do</router-link>
 
+    <UserWelcome />
+
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import UserWelcome from '@/components/UserWelcome.vue';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    UserWelcome,
+  },
 };
 </script>
-
 
 <style lang="scss">
 #app {

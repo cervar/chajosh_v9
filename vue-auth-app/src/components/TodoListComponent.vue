@@ -95,40 +95,63 @@
   };
   </script>
   
-  <style scoped>
-.todo-app {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  <style lang="scss" scoped>
+.favorite {
+  color: rgb(228, 42, 88);
 }
 
-form {
-  margin-bottom: 10px;
+.todo {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(63, 158, 236, 0.342);
+  margin-bottom: 0.5rem;
+  gap: 1.5rem;
+
+  & i {
+    cursor: pointer;
+  }
+
+  & i:hover {
+    transform: scale(1.2);
+  }
+
+  &__task {
+    text-align: center;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__delete:hover {
+    color: red;
+  }
+
+  .low {
+    color: green;
+  }
+
+  .medium {
+    color: orange;
+  }
+
+  .high {
+    color: red;
+  }
 }
 
-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #2980b9;
-}
-
-.completed-task {
-  text-decoration: line-through;
-  color: gray;
-}
-
-.fa {
-  margin-right: 5px;
+.additional-info {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid black;
+  padding-block: 0.5rem;
+  margin-bottom: 0.5rem;
+  span {
+    color: #4529c2;
+    font-weight: bold;
+  }
 }
 </style>
