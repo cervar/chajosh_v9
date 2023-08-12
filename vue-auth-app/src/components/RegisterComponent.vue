@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h2>Register</h2>
+    <h2>Prvi put ovdije ?</h2>
     <form @submit.prevent="register">
       <label for="email">Email:</label>
       <input type="email" id="email" v-model="email" required>
       <br>
-      <label for="password">Password:</label>
+      <label for="password">Lozinka:</label>
       <input type="password" id="password" v-model="password" required>
       <br>
-      <button type="submit">Register</button>
+      <button type="submit">Krenimo u avanturu</button>
     </form>
   </div>
 </template>

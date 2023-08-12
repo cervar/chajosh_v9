@@ -1,21 +1,21 @@
 <template>
   <div>
-    <h2>Login</h2>
+    <h2>Stari Znanac</h2>
     <form @submit.prevent="login">
       <label for="email">Email:</label>
       <input type="email" id="email" v-model="email" required>
       <br>
-      <label for="password">Password:</label>
+      <label for="password">Lozinka:</label>
       <input type="password" id="password" v-model="password" required>
       <br>
-      <button type="submit">Login</button>
+      <button type="submit">Započmimo avanturu</button>
     </form>
   </div>
 </template>
 
 <script>
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-// import { auth } from '@/firebase'; // NE TREBA više import auth iz firebase.js
+
 
 export default {
   data() {

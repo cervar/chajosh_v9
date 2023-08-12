@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <router-link to="/register">Register</router-link> |
-    <router-link to="/login">Login</router-link> |
-    <router-link to="/todo">To-Do</router-link>
+    <router-link to="/register">Novi korisnik</router-link> |
+    <router-link to="/login">Stari znanac</router-link> |
+    <router-link to="/todo">Zadaci</router-link>
 
     <UserWelcome />
 
     
 
     <router-view></router-view>
-
+    <HelloWorld /> 
     <FooterComponent/>
   </div>
 </template>
@@ -17,12 +17,14 @@
 <script>
 import UserWelcome from '@/components/UserWelcome.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: 'App',
   components: {
     UserWelcome,
-    FooterComponent
+    FooterComponent,
+    HelloWorld 
   },
 };
 </script>

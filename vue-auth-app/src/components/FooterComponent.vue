@@ -1,5 +1,4 @@
 <template>
-    
     <div class="footer">
       <div class="items">
         <a
@@ -20,12 +19,17 @@
         Copyright @ 2023 dino, Inc. All Rights Reserved
         </a>
       </div>
+      <HelloWorld /> 
     </div>
   </template>
   
   <script>
+  import HelloWorld from '@/components/HelloWorld.vue';
   export default {
     name: "FooterComponent",
+    components: {
+    HelloWorld 
+  }
   };
   </script>
   
