@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Prvi put ovdije ?</h2>
+    <h2>Prvi put ovdje ?</h2>
     <form @submit.prevent="register">
       <label for="email">Email:</label>
       <input type="email" id="email" v-model="email" required>
