@@ -6,7 +6,9 @@
 
     <UserWelcome />
 
-    
+    <div class="logo-container">
+      <img src="@/assets/logo.png" alt="Logo" class="logo" />
+    </div>
 
     <router-view></router-view>
     <HelloWorld /> 
@@ -37,7 +39,15 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+.logo-container {
+  text-align: center;
+  margin-top: 20px;
+}
 
+.logo {
+  width: 150px; /* Prilagodite veličinu loga prema potrebi */
+  height: auto; /* Očuva omjer stranica loga */
+}
 nav {
   padding: 30px;
 
