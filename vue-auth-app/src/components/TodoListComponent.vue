@@ -2,7 +2,7 @@
     <div class="todo-app">
       <h2>ChA JoSh?</h2>
       <form @submit.prevent="addTask">
-        <input v-model="newTask" placeholder="Enter a new task" />
+        <input v-model="newTask" placeholder="Koji je novi zadatak?" />
         <button type="submit"><i class="fas fa-plus"></i> Dodaj</button>
       </form>
       <button @click="sortTasks"><i class="fas fa-sort"></i> Sortiraj</button>
