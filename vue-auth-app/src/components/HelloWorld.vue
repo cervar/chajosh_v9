@@ -2,7 +2,7 @@
   <div class="info">
     <p>Aplikaciju izradio:</p>
     <ul>
-      <li>Ime: {{ name }}</li>
+      <li>{{ name }}</li>
      <!-- <li>Email: {{ email }}</li> 
        <li>Telefon: {{ phone }}</li> -->
     </ul>
