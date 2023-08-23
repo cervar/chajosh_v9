@@ -3,7 +3,7 @@
       <div class="items">
         <a
           class="item Youtube"
-          href="https://www.youtube.com/"
+          href="https://youtu.be/-hkcw0jm9w4"
           target="_blank"
         >
           <img class="image" src="../assets/YT.png" />
